@@ -1,0 +1,11 @@
+<h1>Posts</h1>
+
+<ul>
+<% posts.each do |post| %>
+<li><%= post.name %> 
+  <a href="/posts/<%=post.id%>">read</a> | 
+  <a href="/posts/<%=post.id%>/edit">edit</a> | 
+  <a href="/posts/<%=post.id%>/delete">delete</a></li>
+<% end %>
+</ul>
+<a href="/posts/new">new</a>

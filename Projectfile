@@ -1,0 +1,12 @@
+deps do
+  #Amethyst Framework
+  github "Codcore/amethyst"
+  github "spalger/crystal-mime"
+  
+  #Mysql Driver
+  github "waterlink/crystal-mysql"
+
+  #ORM Framework
+  github "waterlink/active_record.cr"
+  
+end
