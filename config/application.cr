@@ -1,4 +1,5 @@
 require "../../amethyst/src/amethyst"
+#require "amethyst/all"
 require "../app/controllers/*"
 
 module Blog
@@ -6,12 +7,10 @@ module Blog
 
     settings.configure do |conf|
       conf.environment = "development"
-      conf.static_dirs = ["/public/images", "/public/css", "/public/js"]
+      conf.static_dirs = ["/public", "/app/assets"]
     end
 
     routes.draw do
-      all  "/", "posts#index"
-
       get  "/posts", "posts#index"
       get  "/posts/new", "posts#new"
       post  "/posts", "posts#create"

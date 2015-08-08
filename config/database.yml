@@ -1,0 +1,13 @@
+default: &default
+  adapter: mysql
+  username: drujensen
+  password: 
+
+development: <<: *default
+  database: blog_development
+
+test: <<: *default
+  database: blog_test
+
+production: <<: *default
+  database: blog
