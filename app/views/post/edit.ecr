@@ -3,8 +3,8 @@
 <% mypost = post %>
 <% if mypost %>
   <form action="/posts/<%= mypost.id %>/update" method="post">
-    <input type="text" name="name" placeholder="Name" value="<%= mypost.name %>"/><br/>
-    <textarea name="body" rows="4" cols="50"><%= mypost.body %></textarea><br/>
+    <input type="text" name="name" style="width:100%" placeholder="Name" value="<%= mypost.name %>"/><br/>
+    <textarea name="body" rows="10" style="width:100%"><%= mypost.body %></textarea><br/>
     <input type="submit"/>
   </form>
 <% else %>
