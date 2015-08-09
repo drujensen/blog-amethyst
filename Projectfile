@@ -6,7 +6,4 @@ deps do
   #Mysql Driver
   github "waterlink/crystal-mysql"
 
-  #ORM Framework
-  github "waterlink/active_record.cr"
-  
 end

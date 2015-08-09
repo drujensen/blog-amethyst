@@ -25,25 +25,29 @@ class PostController < Base::Controller
   end
 
   def new
-    @post = Post.new
-    
     respond_to do |format|
       format.html { render "new" }
     end
   end
 
   def create
-    @post = Post.new
-
+    post = Post.new
+    if post
+      post.name = request.parameters["name"]
+      post.body = request.request_parameters["body"]
+      post.save
+    end
+    @post = post
+    
     respond_to do |format|
-      format.html { redirect_to "/post/1" }
+      format.html { redirect_to "/posts" }
     end
   end
 
   def read
     id = request.path_parameters["id"]
+   
     @post = Post.find(id) 
-
     respond_to do |format|
       format.html { render "read" }
     end
@@ -60,8 +64,13 @@ class PostController < Base::Controller
 
   def update
     id = request.path_parameters["id"]
-    @post = Post.find(id) 
-
+    post = Post.find(id) 
+    if post
+      post.name = request.parameters["name"]
+      post.body = request.request_parameters["body"]
+      post.save
+    end
+    @post = post
     respond_to do |format|
       format.html { redirect_to "/posts/#{id}" }
     end
@@ -69,8 +78,10 @@ class PostController < Base::Controller
 
   def delete
     id = request.path_parameters["id"]
-    @post = Post.find(id) 
-
+    post = Post.find(id) 
+    if post
+      post.destroy
+    end
 
     respond_to do |format|
       format.html { redirect_to "/posts" }

@@ -1,1 +1,13 @@
-<h1>Edit</h1>
+<h1>Edit Post</h1>
+
+<% mypost = post %>
+<% if mypost %>
+  <form action="/posts/<%= mypost.id %>/update" method="post">
+    <input type="text" name="name" placeholder="Name" value="<%= mypost.name %>"/><br/>
+    <textarea name="body" rows="4" cols="50"><%= mypost.body %></textarea><br/>
+    <input type="submit"/>
+  </form>
+<% else %>
+<h1>Post not found</h1>
+<% end %>
+<a href="/posts">Back</a>

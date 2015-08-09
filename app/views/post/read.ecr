@@ -1,4 +1,8 @@
-<h1>Read</h1>
-Id: <%= post.id %>
-Name: <%= post.name %>
-
+<% mypost = post %>
+<% if mypost %>
+  <h1><%= mypost.name %></h1>
+  <article><%= mypost.body %></article>
+<% else %>
+  <h1>No Record Found</h1>
+<% end %>
+<a href="/posts">Back</a>
