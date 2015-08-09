@@ -7,7 +7,7 @@ module Blog
 
     settings.configure do |conf|
       conf.environment = "development"
-      conf.static_dirs = ["/public", "/app/assets"]
+      conf.static_dirs = ["/public"]
     end
 
     routes.draw do
@@ -25,6 +25,3 @@ module Blog
 
   end
 end
-
-app = Blog::Application.new
-app.serve
