@@ -1,11 +1,19 @@
-<h1>Blog running on Crystal and Amethyst</h1>
-
-<ul>
 <% posts.each do |post| %>
-<li><%= post.name %> 
-  <a href="/posts/<%=post.id%>">read</a> | 
-  <a href="/posts/<%=post.id%>/edit">edit</a> | 
-  <a href="/posts/<%=post.id%>/delete">delete</a></li>
+
+<div class="blog-post">
+  <h2 class="blog-post-title"><%= post.name %></h2>
+  <p class="blog-post-meta">August 9, 2015 by <a href="#">Dru Jensen</a></p>
+
+  <p><%= post.body %></p>
+  
+  <p>
+    <a href="/posts/<%=post.id%>">read</a> | 
+    <a href="/posts/<%=post.id%>/edit">edit</a> | 
+    <a href="/posts/<%=post.id%>/delete">delete</a>
+  </p>
+            
+</div><!-- /.blog-post -->
+
 <% end %>
-</ul>
+
 <a href="/posts/new">new</a>

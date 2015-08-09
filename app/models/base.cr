@@ -10,7 +10,7 @@ module Base
       yaml_file = File.read("#{__DIR__}/../../config/database.yml")
       yaml = YAML.load(yaml_file)
       if yaml.is_a?(Hash(YAML::Type, YAML::Type))
-        settings = yaml["development"]
+        settings = yaml[Base::App.settings.environment]
         if settings.is_a?(Hash(YAML::Type, YAML::Type))
           if settings["host"]
             host = settings["host"]

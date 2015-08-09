@@ -5,6 +5,8 @@ class PostController < Base::Controller
 
   actions :index, :new, :create, :read, :edit, :update, :delete
 
+  layout "default", "#{__DIR__}/../views/layouts"
+  
   view "index", "#{__DIR__}/../views/post"
   view "read", "#{__DIR__}/../views/post"
   view "new", "#{__DIR__}/../views/post"
@@ -20,13 +22,13 @@ class PostController < Base::Controller
     @posts = Post.all
 
     respond_to do |format|
-      format.html { render "index" }
+      format.html { render_with_layout "index", "default" }
     end
   end
 
   def new
     respond_to do |format|
-      format.html { render "new" }
+      format.html { render_with_layout "new", "default" }
     end
   end
 
@@ -34,7 +36,7 @@ class PostController < Base::Controller
     post = Post.new
     if post
       post.name = request.parameters["name"]
-      post.body = request.request_parameters["body"]
+      post.body = request.parameters["body"]
       post.save
     end
     @post = post
@@ -45,29 +47,29 @@ class PostController < Base::Controller
   end
 
   def read
-    id = request.path_parameters["id"]
+    id = request.parameters["id"]
    
     @post = Post.find(id) 
     respond_to do |format|
-      format.html { render "read" }
+      format.html { render_with_layout "read", "default" }
     end
   end
 
   def edit
-    id = request.path_parameters["id"]
+    id = request.parameters["id"]
     @post = Post.find(id) 
 
     respond_to do |format|
-      format.html { render "edit" }
+      format.html { render_with_layout "edit", "default" }
     end
   end
 
   def update
-    id = request.path_parameters["id"]
+    id = request.parameters["id"]
     post = Post.find(id) 
     if post
       post.name = request.parameters["name"]
-      post.body = request.request_parameters["body"]
+      post.body = request.parameters["body"]
       post.save
     end
     @post = post
@@ -77,7 +79,7 @@ class PostController < Base::Controller
   end
 
   def delete
-    id = request.path_parameters["id"]
+    id = request.parameters["id"]
     post = Post.find(id) 
     if post
       post.destroy

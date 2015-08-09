@@ -2,7 +2,7 @@ development:
   database: blog_development
   host: 127.0.0.1
   port: 3306
-  username: drujensen
+  username: root
   password: 
 
 test: 

@@ -7,10 +7,12 @@ module Blog
 
     settings.configure do |conf|
       conf.environment = "development"
-      conf.static_dirs = ["../public", "../app/assets"]
+      conf.static_dirs = ["/public", "/app/assets"]
     end
 
     routes.draw do
+      all  "/", "posts#index"
+      
       get  "/posts", "posts#index"
       get  "/posts/new", "posts#new"
       post  "/posts/create", "posts#create"

@@ -1,7 +1,5 @@
 class Post < Base::Model
-  property :id
-  property :name
-  property :body
+  property :id, :name, :body
 
   def self.make(result)
     post = Post.new
