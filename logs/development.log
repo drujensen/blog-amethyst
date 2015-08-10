@@ -1,0 +1,1104 @@
+
+use Amethyst::Middleware::ShowExceptions
+use Amethyst::Middleware::HttpLogger
+use Amethyst::Middleware::TimeLogger
+use Amethyst::Middleware::Static
+
+[Amethyst 0.1.7] serving application "blog" at http://127.0.0.1:8080
+
+   [Amethyst 0.1.7] serving application "blog" at http://127.0.0.1:8080Unhandled exception: closed stream
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept-encoding :  ["gzip, deflate"]
+      Accept          :  ["text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Cache-control   :  ["max-age=0"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  2.4800 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+   Response        :  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog using Amethyst</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Testing the Crystal and Amethyst
+    alternative to RoR's.">
+    <meta name="author" content="Dru Jensen">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/application.css">
+
+  </head>
+  <body>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="/">Home</a>
+          <a class="blog-nav-item" href="/posts/new">New</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Dru's Blog</h1>
+        <p class="lead blog-description">Example Blog using Crystal and
+        Amethyst.</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+          
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>This is an example Blog site using Crystal, Amethyst and
+            Bootstrap Blog Template.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/javascripts/application.js"></script>
+  </body>
+</html>
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["text/html"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /stylesheets/application.css
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept-encoding :  ["gzip, deflate"]
+      Accept          :  ["text/css,*/*;q=0.1"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/"]
+      Cache-control   :  ["max-age=0"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  4.7610 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["text/css"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /javascripts/application.js
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept-encoding :  ["gzip, deflate"]
+      Accept          :  ["*/*"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/"]
+      Cache-control   :  ["max-age=0"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  0.0580 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["application/javascript"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /posts/new
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept          :  ["text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  0.0660 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+   Response        :  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog using Amethyst</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Testing the Crystal and Amethyst
+    alternative to RoR's.">
+    <meta name="author" content="Dru Jensen">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/application.css">
+
+  </head>
+  <body>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="/">Home</a>
+          <a class="blog-nav-item" href="/posts/new">New</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Dru's Blog</h1>
+        <p class="lead blog-description">Example Blog using Crystal and
+        Amethyst.</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+          <h1>New Post</h1>
+
+<form action="/posts/create" method="post">
+  <input type="text" name="name" style="width:100%" placeholder="Name" /><br/>
+  <textarea name="body" rows="10" style="width:100%"></textarea><br/>
+  <input type="submit"/>
+</form>
+<a href="/posts">Back</a>
+
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>This is an example Blog site using Crystal, Amethyst and
+            Bootstrap Blog Template.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/javascripts/application.js"></script>
+  </body>
+</html>
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["text/html"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /stylesheets/application.css
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept          :  ["text/css,*/*;q=0.1"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/posts/new"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  0.0990 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["text/css"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /javascripts/application.js
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept          :  ["*/*"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/posts/new"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  0.0510 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["application/javascript"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  POST
+   Path            :  /posts/create
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {"name" => "Crystal and Amethyst", "body" => "I heard about Crystal from Orange County Ruby User's Group and I decided I better learn more about it.  I think it has some real potential since it's the best of both worlds of speed similar to C compiled apps and Ruby descriptive language.<br/><br/>\r\n\r\nThe type inference is amazing!  It does an excellent job determining the type of variables.  I took an existing ruby program and it had very little problems compiling it.  Arrays and Hashes are the exception to this.  You need to specify the types if you start empty. <br/><br/>\r\n\r\nThe Union of types is a blessing and a curse.  I think I prefer the Swift approach of supporting nil able objects with ? and dereferencing via !.  The use of if blocks to dereference a union is convoluting the code a bit.  \r\n<br/><br/>\r\nif variable.is_a?(String)\r\n<br/><br/>\r\nSo far, these are minor inconveniences when building this blog."}
+   Content type    :  application/x-www-form-urlencoded
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Content-type    :  ["application/x-www-form-urlencoded"]
+      Origin          :  ["http://blog.drujensen.com"]
+      Accept          :  ["text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Referer         :  ["http://blog.drujensen.com/posts/new"]
+      Accept-language :  ["en-us"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+      Content-length  :  ["1004"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  4.7160 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  303
+   Response        :  Not found
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["text/html"]
+      Location        :  ["/posts"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /posts
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Origin          :  ["http://blog.drujensen.com"]
+      Accept          :  ["text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/posts/new"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  2.4050 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+   Response        :  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog using Amethyst</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Testing the Crystal and Amethyst
+    alternative to RoR's.">
+    <meta name="author" content="Dru Jensen">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/application.css">
+
+  </head>
+  <body>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="/">Home</a>
+          <a class="blog-nav-item" href="/posts/new">New</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Dru's Blog</h1>
+        <p class="lead blog-description">Example Blog using Crystal and
+        Amethyst.</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+          
+
+<div class="blog-post">
+  <h2 class="blog-post-title">Crystal and Amethyst</h2>
+  <p class="blog-post-meta">August 10, 2015 by <a href="#">Dru Jensen</a></p>
+
+  <p>I heard about Crystal from Orange County Ruby User's Group and I decided I better learn more about it.  I think it has some real potential since it's the best of both worlds of speed similar to C compiled apps and Ruby descriptive language.<br/><br/>
+
+The type inference is amazing!  It does an excellent job determining the type of variables.  I took an existing ruby program and it had very little problems compiling it.  Arrays and Hashes are the exception to this.  You need to specify the types if you start empty. <br/><br/>
+
+The Union of types is a blessing and a curse.  I think I prefer the Swift approach of supporting nil able objects with ? and dereferencing via !.  The use of if blocks to dereference a union is convoluting the code a bit.  
+<br/><br/>
+if variable.is_a?(String)
+<br/><br/>
+So far, these are minor inconveniences when building this blog.</p>
+  
+  <p>
+    <a href="/posts/1">read</a> | 
+    <a href="/posts/1/edit">edit</a> | 
+    <a href="/posts/1/delete">delete</a>
+  </p>
+            
+</div><!-- /.blog-post -->
+
+
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>This is an example Blog site using Crystal, Amethyst and
+            Bootstrap Blog Template.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/javascripts/application.js"></script>
+  </body>
+</html>
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["text/html"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /javascripts/application.js
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept          :  ["*/*"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/posts"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  0.0870 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["application/javascript"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /stylesheets/application.css
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept          :  ["text/css,*/*;q=0.1"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/posts"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  0.1030 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["text/css"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /posts/1
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {"id" => "1"}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept          :  ["text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/posts"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  3.0610 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+   Response        :  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog using Amethyst</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Testing the Crystal and Amethyst
+    alternative to RoR's.">
+    <meta name="author" content="Dru Jensen">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/application.css">
+
+  </head>
+  <body>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="/">Home</a>
+          <a class="blog-nav-item" href="/posts/new">New</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Dru's Blog</h1>
+        <p class="lead blog-description">Example Blog using Crystal and
+        Amethyst.</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+          
+
+  <h2 class="blog-post-title">Crystal and Amethyst</h2>
+  <p class="blog-post-meta">2015-08-10 00:00:00 by <a href="#">Dru Jensen</a></p>
+  <p>I heard about Crystal from Orange County Ruby User's Group and I decided I better learn more about it.  I think it has some real potential since it's the best of both worlds of speed similar to C compiled apps and Ruby descriptive language.<br/><br/>
+
+The type inference is amazing!  It does an excellent job determining the type of variables.  I took an existing ruby program and it had very little problems compiling it.  Arrays and Hashes are the exception to this.  You need to specify the types if you start empty. <br/><br/>
+
+The Union of types is a blessing and a curse.  I think I prefer the Swift approach of supporting nil able objects with ? and dereferencing via !.  The use of if blocks to dereference a union is convoluting the code a bit.  
+<br/><br/>
+if variable.is_a?(String)
+<br/><br/>
+So far, these are minor inconveniences when building this blog.</p>
+
+<a href="/posts">Back</a>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>This is an example Blog site using Crystal, Amethyst and
+            Bootstrap Blog Template.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/javascripts/application.js"></script>
+  </body>
+</html>
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["text/html"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /stylesheets/application.css
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept          :  ["text/css,*/*;q=0.1"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/posts/1"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  0.1150 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["text/css"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /javascripts/application.js
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept          :  ["*/*"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/posts/1"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  0.1000 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["application/javascript"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /posts
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept          :  ["text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/posts/1"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  2.1050 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+   Response        :  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog using Amethyst</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Testing the Crystal and Amethyst
+    alternative to RoR's.">
+    <meta name="author" content="Dru Jensen">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/application.css">
+
+  </head>
+  <body>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="/">Home</a>
+          <a class="blog-nav-item" href="/posts/new">New</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Dru's Blog</h1>
+        <p class="lead blog-description">Example Blog using Crystal and
+        Amethyst.</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+          
+
+<div class="blog-post">
+  <h2 class="blog-post-title">Crystal and Amethyst</h2>
+  <p class="blog-post-meta">August 10, 2015 by <a href="#">Dru Jensen</a></p>
+
+  <p>I heard about Crystal from Orange County Ruby User's Group and I decided I better learn more about it.  I think it has some real potential since it's the best of both worlds of speed similar to C compiled apps and Ruby descriptive language.<br/><br/>
+
+The type inference is amazing!  It does an excellent job determining the type of variables.  I took an existing ruby program and it had very little problems compiling it.  Arrays and Hashes are the exception to this.  You need to specify the types if you start empty. <br/><br/>
+
+The Union of types is a blessing and a curse.  I think I prefer the Swift approach of supporting nil able objects with ? and dereferencing via !.  The use of if blocks to dereference a union is convoluting the code a bit.  
+<br/><br/>
+if variable.is_a?(String)
+<br/><br/>
+So far, these are minor inconveniences when building this blog.</p>
+  
+  <p>
+    <a href="/posts/1">read</a> | 
+    <a href="/posts/1/edit">edit</a> | 
+    <a href="/posts/1/delete">delete</a>
+  </p>
+            
+</div><!-- /.blog-post -->
+
+
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>This is an example Blog site using Crystal, Amethyst and
+            Bootstrap Blog Template.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/javascripts/application.js"></script>
+  </body>
+</html>
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["text/html"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /javascripts/application.js
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept          :  ["*/*"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/posts"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  0.0840 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["application/javascript"]
+
+_______________________________________________________________________________________________________________________
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ REQUEST _______________________________________________________________________________________________________
+   Http method     :  GET
+   Path            :  /stylesheets/application.css
+   Query string    :  0
+   Version         :  HTTP/1.1
+   Query params    :  {}
+   Path parameters :  {}
+   Post parameters :  {}
+
+      ____ headers ____________________________________________________________________________________________________
+      Host            :  ["blog.drujensen.com"]
+      Accept          :  ["text/css,*/*;q=0.1"]
+      User-agent      :  ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"]
+      Accept-language :  ["en-us"]
+      Referer         :  ["http://blog.drujensen.com/posts"]
+      Accept-encoding :  ["gzip, deflate"]
+      X-forwarded-for :  ["76.90.27.163"]
+      X-forwarded-host :  ["blog.drujensen.com"]
+      X-forwarded-server :  ["blog.drujensen.com"]
+      Connection      :  ["Keep-Alive"]
+
+                  ____ cookies ________________________________________________________________________________________
+
+____/ #<Amethyst::Middleware::TimeLogger:0x1201760> \__________________________________________________________________
+
+      Time elapsed    :  0.0430 ms
+
+
+____/ #<Amethyst::Middleware::HttpLogger:0x1201740> \__________________________________________________________________
+
+   ____ RESPONSE ______________________________________________________________________________________________________
+   Status          :  200
+
+      ____ headers ____________________________________________________________________________________________________
+      Content-type    :  ["text/css"]
+
+_______________________________________________________________________________________________________________________
