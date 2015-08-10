@@ -1,7 +1,8 @@
 <% mypost = post %>
 <% if mypost %>
-  <h1><%= mypost.name %></h1>
-  <article><%= mypost.body %></article>
+  <h2 class="blog-post-title"><%= mypost.name %></h2>
+  <p class="blog-post-meta"><%= mypost.updated_at %> by <a href="#">Dru Jensen</a></p>
+  <p><%= mypost.body %></p>
 <% else %>
   <h1>No Record Found</h1>
 <% end %>
