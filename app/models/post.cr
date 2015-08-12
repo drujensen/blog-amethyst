@@ -13,30 +13,31 @@ class Post < Base::Model
   end
 
   def self.all
-    return self.select(%{SELECT id, name, body, created_at, updated_at FROM
-                       posts ORDER BY updated_at desc})
+    return self.select(%{SELECT id, name, body, created_at, updated_at 
+                       FROM posts ORDER BY updated_at desc})
   end
 
   def self.find(id)
-    return self.select_one(%{SELECT id, name, body, created_at, updated_at FROM posts where id = #{id}})
+    return self.select_one(%{SELECT id, name, body, created_at, updated_at
+                           FROM posts where id = #{id} limit 1})
   end
   
   def save
     if id
       updated_at = Time.now
-      update(%{UPDATE posts set name="#{name}", body="#{body}",
-             updated_at="#{updated_at}" where id=#{id} })
+      update(%{UPDATE posts SET name="#{name}", body="#{body}",
+             updated_at="#{updated_at}" WHERE id=#{id} })
     else
       created_at = Time.now
       updated_at = Time.now
-      insert(%{INSERT into posts(name, body, created_at, updated_at)
-             values("#{name}","#{body}", "#{created_at}", "#{updated_at}") })
+      insert(%{INSERT INTO posts(name, body, created_at, updated_at)
+             VALUES ("#{name}","#{body}", "#{created_at}", "#{updated_at}") })
     end
     return true
   end
 
   def destroy
-    return delete(%{DELETE from posts where id=#{id} })
+    return delete(%{DELETE FROM posts WHERE id=#{id} })
   end
 
   def last_updated
@@ -51,7 +52,7 @@ class Post < Base::Model
   def markdown_body
     markdown_body = body
     if markdown_body.is_a?(String)
-      Markdown.to_html(markdown_body)
+      markdown_body = Markdown.to_html(markdown_body)
     end
     markdown_body
   end

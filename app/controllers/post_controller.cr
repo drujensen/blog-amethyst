@@ -39,8 +39,7 @@ class PostController < Base::Controller
       post.body = request.parameters["body"]
       post.save
     end
-    @post = post
-    
+   
     respond_to do |format|
       format.html { redirect_to "/posts" }
     end
@@ -57,8 +56,8 @@ class PostController < Base::Controller
 
   def edit
     id = request.parameters["id"]
+    
     @post = Post.find(id) 
-
     respond_to do |format|
       format.html { render_with_layout "edit", "default" }
     end
@@ -72,7 +71,7 @@ class PostController < Base::Controller
       post.body = request.parameters["body"]
       post.save
     end
-    @post = post
+    
     respond_to do |format|
       format.html { redirect_to "/posts/#{id}" }
     end

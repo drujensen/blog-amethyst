@@ -1,7 +1,7 @@
 <% mypost = post %>
 <% if mypost %>
   <h2 class="blog-post-title"><%= mypost.name %></h2>
-  <p class="blog-post-meta"><%= mypost.last_updated %> by <a href="#">Dru Jensen</a></p>
+  <p class="blog-post-meta">Created on <%= mypost.last_updated %> by <a href="https://github.com/drujensen" target="_blank">Dru Jensen</a></p>
   <p><%= mypost.markdown_body %></p>
 <% else %>
   <h1>No Record Found</h1>
