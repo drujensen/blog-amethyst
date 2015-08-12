@@ -11,16 +11,23 @@ module Blog
     end
 
     routes.draw do
-      all  "/", "posts#index"
+      all  "/", "post#index"
       
-      get  "/posts", "posts#index"
-      get  "/posts/new", "posts#new"
-      post  "/posts/create", "posts#create"
-      get  "/posts/:id", "posts#read"
-      get  "/posts/:id/edit", "posts#edit"
-      post "/posts/:id/update", "posts#update"
-      get  "/posts/:id/delete", "posts#delete"
+      get  "/posts", "post#index"
+      get  "/posts/new", "post#new"
+      post  "/posts/create", "post#create"
+      get  "/posts/:id", "post#read"
+      get  "/posts/:id/edit", "post#edit"
+      post "/posts/:id/update", "post#update"
+      get  "/posts/:id/delete", "post#delete"
+
+      get  "/login", "login#new"
+      post  "/session/create", "login#create"
+      get  "/logout", "login#delete"
+
       register PostController
+      register LoginController
+
     end
 
   end

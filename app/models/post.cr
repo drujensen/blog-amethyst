@@ -1,3 +1,4 @@
+require "markdown/markdown"
 class Post < Base::Model
   property :id, :name, :body, :created_at, :updated_at
 
@@ -45,5 +46,13 @@ class Post < Base::Model
       last_updated = formatter.format(last_updated)
     end
     return last_updated
+  end
+
+  def markdown_body
+    markdown_body = body
+    if markdown_body.is_a?(String)
+      Markdown.to_html(markdown_body)
+    end
+    markdown_body
   end
 end
