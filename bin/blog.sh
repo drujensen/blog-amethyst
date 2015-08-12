@@ -1,1 +1,1 @@
-./blog > ../logs/development.log 2>&1 &
+./bin/blog > logs/development.log 2>&1 &
