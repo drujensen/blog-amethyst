@@ -4,6 +4,7 @@ class PostController < Base::Controller
   property :posts, :post, :authorized
 
   actions :index, :new, :create, :read, :edit, :update, :delete
+  before_action :authorize
 
   layout "default", "#{__DIR__}/../views/layouts"
   
@@ -20,7 +21,6 @@ class PostController < Base::Controller
   end
  
   def index
-    @authorized = session.has_key? :authorized 
     @posts = Post.all
     respond_to do |format|
       format.html { render_with_layout "index", "default" }
@@ -28,7 +28,6 @@ class PostController < Base::Controller
   end
 
   def new
-    @authorized = session.has_key? :authorized 
     respond_to do |format|
       if @authorized
         format.html { render_with_layout "new", "default" }
@@ -39,7 +38,6 @@ class PostController < Base::Controller
   end
 
   def create
-    @authorized = session.has_key? :authorized 
     if @authorized
       post = Post.new
       if post
@@ -55,7 +53,6 @@ class PostController < Base::Controller
   end
 
   def read
-    @authorized = session.has_key? :authorized 
     id = request.parameters["id"]
    
     @post = Post.find(id) 
@@ -65,7 +62,6 @@ class PostController < Base::Controller
   end
 
   def edit
-    @authorized = session.has_key? :authorized 
     id = request.parameters["id"]
     
     @post = Post.find(id) 
@@ -79,7 +75,6 @@ class PostController < Base::Controller
   end
 
   def update
-    @authorized = session.has_key? :authorized 
     id = request.parameters["id"]
     if @authorized
       post = Post.find(id) 
@@ -96,7 +91,6 @@ class PostController < Base::Controller
   end
 
   def delete
-    @authorized = session.has_key? :authorized 
     id = request.parameters["id"]
     if @authorized
       post = Post.find(id) 
@@ -108,6 +102,11 @@ class PostController < Base::Controller
     respond_to do |format|
       format.html { redirect_to "/posts" }
     end
+  end
+
+  def authorize
+    puts "DRU: AUTHORIZE CALLED"
+    @authorized = session.has_key? :authorized 
   end
 
 end
