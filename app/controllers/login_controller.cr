@@ -5,6 +5,7 @@ class LoginController < Base::Controller
   property :authorized
   
   actions :new, :create, :delete
+  before_action :authorize, only: [:new, :create, :delete]
 
   layout "default", "#{__DIR__}/../views/layouts"
   
@@ -41,5 +42,11 @@ class LoginController < Base::Controller
       format.html { redirect_to "/" }
     end
   end
+
+  def authorize
+    @authorized = session.has_key? :authorized
+    return true
+  end
+ 
 
 end

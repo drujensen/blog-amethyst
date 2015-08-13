@@ -4,7 +4,8 @@ class PostController < Base::Controller
   property :posts, :post, :authorized
 
   actions :index, :new, :create, :read, :edit, :update, :delete
-  before_action :authorize
+  before_action :authorize, only: [:index, :new, :create, :read, :edit,
+                                   :update, :delete]
 
   layout "default", "#{__DIR__}/../views/layouts"
   
@@ -105,8 +106,8 @@ class PostController < Base::Controller
   end
 
   def authorize
-    puts "DRU: AUTHORIZE CALLED"
-    @authorized = session.has_key? :authorized 
+    @authorized = session.has_key? :authorized
+    return true
   end
 
 end
