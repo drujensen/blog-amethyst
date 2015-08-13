@@ -14,9 +14,7 @@ allow for most scenarios needed.
 
 This project requires Crystal 0.7.5 and a MySQL server installed.
 
-You will need my forked version of Amethyst. Clone the example and configure to your own settings.
 ```
-git clone git@github.com:drujensen/amethyst.git
 git clone git@github.com:drujensen/crystal-blog.git
 ```
 
@@ -35,17 +33,12 @@ from your browser.
 
 # Development
 
-There are several features that are still needed.  Please send me your pull
-requests and I will be happy to include them.  I am trying to keep this very
+There are several features that are still needed.  I am trying to keep this very
 simple and RoR'ish as much as possible.  Keep that in mind when contributing.
 
 # Roadmap
 
 - Add Specs
-- Fix created_at, updated_at Date/Time
-- Add basic authentication
-- Add Mark Down capability
-- Confirm Deletes
 - Support PUT and DELETE Restful methods
 - Add Comments with has_many like syntax
 - Add Endless Paging
