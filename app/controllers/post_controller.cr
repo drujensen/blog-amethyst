@@ -1,7 +1,7 @@
 require "../models/*"
 
 class PostController < Base::Controller
-  property :posts, :post
+  property :posts, :post, :authorized
 
   actions :index, :new, :create, :read, :edit, :update, :delete
 
@@ -13,39 +13,49 @@ class PostController < Base::Controller
   view "edit", "#{__DIR__}/../views/post"
 
   def initialize
+    @authorized = false
     @posts = [] of Post
     @post = Post.new
     super
   end
-  
+ 
   def index
+    @authorized = session.has_key? :authorized 
     @posts = Post.all
-
     respond_to do |format|
       format.html { render_with_layout "index", "default" }
     end
   end
 
   def new
+    @authorized = session.has_key? :authorized 
     respond_to do |format|
-      format.html { render_with_layout "new", "default" }
+      if @authorized
+        format.html { render_with_layout "new", "default" }
+      else
+        format.html { redirect_to "/posts" }
+      end
     end
   end
 
   def create
-    post = Post.new
-    if post
-      post.name = request.parameters["name"]
-      post.body = request.parameters["body"]
-      post.save
+    @authorized = session.has_key? :authorized 
+    if @authorized
+      post = Post.new
+      if post
+        post.name = request.parameters["name"]
+        post.body = request.parameters["body"]
+        post.save
+      end
     end
-   
+    
     respond_to do |format|
       format.html { redirect_to "/posts" }
     end
   end
 
   def read
+    @authorized = session.has_key? :authorized 
     id = request.parameters["id"]
    
     @post = Post.find(id) 
@@ -55,21 +65,29 @@ class PostController < Base::Controller
   end
 
   def edit
+    @authorized = session.has_key? :authorized 
     id = request.parameters["id"]
     
     @post = Post.find(id) 
     respond_to do |format|
-      format.html { render_with_layout "edit", "default" }
+      if @authorized
+        format.html { render_with_layout "edit", "default" }
+      else
+        format.html { redirect_to "/posts" }
+      end
     end
   end
 
   def update
+    @authorized = session.has_key? :authorized 
     id = request.parameters["id"]
-    post = Post.find(id) 
-    if post
-      post.name = request.parameters["name"]
-      post.body = request.parameters["body"]
-      post.save
+    if @authorized
+      post = Post.find(id) 
+      if post
+        post.name = request.parameters["name"]
+        post.body = request.parameters["body"]
+        post.save
+      end
     end
     
     respond_to do |format|
@@ -78,14 +96,18 @@ class PostController < Base::Controller
   end
 
   def delete
+    @authorized = session.has_key? :authorized 
     id = request.parameters["id"]
-    post = Post.find(id) 
-    if post
-      post.destroy
+    if @authorized
+      post = Post.find(id) 
+      if post
+        post.destroy
+      end
     end
 
     respond_to do |format|
       format.html { redirect_to "/posts" }
     end
   end
+
 end
