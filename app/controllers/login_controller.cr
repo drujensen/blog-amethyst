@@ -17,14 +17,12 @@ class LoginController < Base::Controller
   end
   
   def new
-    @authorized = session.has_key? :authorized 
     respond_to do |format|
       format.html { render_with_layout "new", "default" }
     end
   end
 
   def create
-    @authorized = session.has_key? :authorized 
     username = request.parameters["username"]
     password = request.parameters["password"]
     if username == "admin" && Crypto::MD5.hex_digest(password) == "ff2fca5e688561ed5237c9a9445c427a"
@@ -36,7 +34,6 @@ class LoginController < Base::Controller
   end
 
   def delete
-    @authorized = session.has_key? :authorized 
     destroy_session
     respond_to do |format|
       format.html { redirect_to "/" }
