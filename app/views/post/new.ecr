@@ -1,9 +1,15 @@
 <h1>New Post</h1>
 
 <form action="/posts/create" method="post">
-  <input type="text" name="name" style="width:100%" placeholder="Name" /><br/>
-  <textarea name="body" rows="10" style="width:100%"></textarea><br/>
-  <input type="submit"/>
+  <div class="form-group">
+    <input type="text" class="form-control" id="title" name="name" placeholder="Title">
+  </div>
+  <div class="form-group">
+    <textarea name="body" class="form-control" id="body" placeholder="Body"
+      rows="10"></textarea>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
 </form>
+
 <a href="/posts">Back</a>
 
