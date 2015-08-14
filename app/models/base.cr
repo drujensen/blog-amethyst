@@ -44,12 +44,12 @@ module Base
       return connection
     end
 
-    def self.select(query : String)
+    def self.select(query, params)
       rows = [] of self
       conn = self.connection
       if conn
         begin
-          results = conn.query(query)
+          results = MySQL::Query.new(query, params).run(conn)
           if results
             results.each do |result|
               rows << make(result)
@@ -62,12 +62,12 @@ module Base
       return rows
     end
 
-    def self.select_one(query : String)
+    def self.select_one(query, params)
       row = nil
       conn = self.connection
       if conn
         begin
-          results = conn.query(query)
+          results = MySQL::Query.new(query, params).run(conn)
           if results
             row = make(results[0])
           end
@@ -78,11 +78,11 @@ module Base
       return row
     end
 
-    def insert(query : String)
+    def insert(query, params)
       conn = Base::Model.connection
       if conn
         begin
-          conn.query(query)
+          MySQL::Query.new(query, params).run(conn)
           results = conn.query(%{SELECT LAST_INSERT_ID() })
                                  
           if results
@@ -95,11 +95,11 @@ module Base
       return id
     end
 
-    def update(query : String)
+    def update(query, params)
       conn = Base::Model.connection
       if conn
         begin
-          conn.query(query)
+          MySQL::Query.new(query, params).run(conn)
         ensure
           conn.close
         end
@@ -107,12 +107,12 @@ module Base
       return true
     end
 
-    def delete(query : String)
+    def delete(query, params)
       conn = Base::Model.connection
       if conn
         begin
           if id
-            conn.query(query)
+            MySQL::Query.new(query, params).run(conn)
           end
         ensure
           conn.close
