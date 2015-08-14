@@ -44,7 +44,7 @@ module Base
       return connection
     end
 
-    def self.select(query, params)
+    def self.select(query, params = {} of String => String)
       rows = [] of self
       conn = self.connection
       if conn
@@ -62,7 +62,7 @@ module Base
       return rows
     end
 
-    def self.select_one(query, params)
+    def self.select_one(query, params = {} of String => String)
       row = nil
       conn = self.connection
       if conn
@@ -78,7 +78,7 @@ module Base
       return row
     end
 
-    def insert(query, params)
+    def insert(query, params = {} of String => String)
       conn = Base::Model.connection
       if conn
         begin
@@ -95,7 +95,7 @@ module Base
       return id
     end
 
-    def update(query, params)
+    def update(query, params = {} of String => String)
       conn = Base::Model.connection
       if conn
         begin
@@ -107,7 +107,7 @@ module Base
       return true
     end
 
-    def delete(query, params)
+    def delete(query, params = {} of String => String)
       conn = Base::Model.connection
       if conn
         begin

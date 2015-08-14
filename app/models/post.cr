@@ -13,34 +13,33 @@ class Post < Base::Model
   end
 
   def self.all
-    return self.select(%{SELECT id, name, body, created_at, updated_at 
-                       FROM posts ORDER BY updated_at desc}, {} of String =>
-                       String)
+    return self.select("SELECT id, name, body, created_at, updated_at 
+                       FROM posts ORDER BY updated_at desc")
   end
 
   def self.find(id)
-    return self.select_one(%{SELECT id, name, body, created_at, updated_at
-                           FROM posts where id = :id limit 1}, {"id" => id})
+    return self.select_one("SELECT id, name, body, created_at, updated_at
+                           FROM posts where id = :id limit 1", {"id" => id})
   end
   
   def save
     if id
       updated_at = Time.now
-      update(%{UPDATE posts SET name=:name, body=:body,
-             updated_at=:updated_at WHERE id=:id }, {"name" => name, "body"
+      update("UPDATE posts SET name=:name, body=:body,
+             updated_at=:updated_at WHERE id=:id", {"name" => name, "body"
       => body, "updated_at" => updated_at, "id" => id})
     else
       created_at = Time.now
       updated_at = Time.now
-      insert(%{INSERT INTO posts(name, body, created_at, updated_at)
-             VALUES (:name, :body, :created_at, :updated_at) }, {"name" =>
+      insert("INSERT INTO posts(name, body, created_at, updated_at)
+             VALUES (:name, :body, :created_at, :updated_at)", {"name" =>
       name, "body" => body, "created_at" => created_at, "updated_at" => updated_at})
     end
     return true
   end
 
   def destroy
-    return delete(%{DELETE FROM posts WHERE id=:id }, {"id" => id})
+    return delete("DELETE FROM posts WHERE id=:id", {"id" => id})
   end
 
   def last_updated
