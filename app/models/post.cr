@@ -12,13 +12,27 @@ class Post < Base::Model
     return post
   end
 
+  def self.clear
+    return self.query("TRUNCATE posts")
+  end
+
+  def self.create
+    return self.query("CREATE TABLE posts (id INT NOT NULL AUTO_INCREMENT,
+                      name VARCHAR(255), body TEXT, created_at DATE,
+                      updated_at DATE, PRIMARY KEY (id));")
+  end
+
+  def self.drop
+    return self.query("DROP table posts")
+  end
+
   def self.all
-    return self.select("SELECT id, name, body, created_at, updated_at 
+    return self.query("SELECT id, name, body, created_at, updated_at 
                        FROM posts ORDER BY updated_at desc")
   end
 
   def self.find(id)
-    return self.select_one("SELECT id, name, body, created_at, updated_at
+    return self.query_one("SELECT id, name, body, created_at, updated_at
                            FROM posts where id = :id limit 1", {"id" => id})
   end
   
@@ -31,7 +45,7 @@ class Post < Base::Model
     else
       created_at = Time.now
       updated_at = Time.now
-      insert("INSERT INTO posts(name, body, created_at, updated_at)
+      @id = insert("INSERT INTO posts(name, body, created_at, updated_at)
              VALUES (:name, :body, :created_at, :updated_at)", {"name" =>
       name, "body" => body, "created_at" => created_at, "updated_at" => updated_at})
     end
@@ -39,8 +53,9 @@ class Post < Base::Model
   end
 
   def destroy
-    return delete("DELETE FROM posts WHERE id=:id", {"id" => id})
+    return update("DELETE FROM posts WHERE id=:id", {"id" => id})
   end
+
 
   def last_updated
     last_updated = updated_at
