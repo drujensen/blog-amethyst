@@ -40,10 +40,10 @@ simple and RoR'ish as much as possible.  Keep that in mind when contributing.
 
 # Roadmap
 
-- Add Controller Specs
 - Support PUT and DELETE Restful methods
 - Simplify the Models with macros
-- Add Comments with has_many like syntax
+- Add Validation and Error Handling
+- Add Comments with `has many` like syntax
 - Add Capistrano
 - Add Grunt/Gulp for Asset Compilation
 

@@ -1,4 +1,5 @@
 require "markdown/markdown"
+
 class Post < Base::Model
   property :id, :name, :body, :created_at, :updated_at
 
