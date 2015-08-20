@@ -18,9 +18,11 @@ This project requires Crystal 0.7.5 and a MySQL server installed.
 git clone git@github.com:drujensen/crystal-blog.git
 ```
 
-Next setup the database by creating a "blog_development" schema.  Connect to
-the database and run the /db/migrate/* scripts manually. Update the
-config/database.yml to match your settings.
+Next setup the database by creating a "blog_development" and blog_test" schema. 
+
+Update the config/database.yml to match your settings. 
+
+Connect to the database and run `crystal /db/migrate.cr` to drop and create the databases. 
 
 Install dependencies using `crystal deps`
 
@@ -38,12 +40,10 @@ simple and RoR'ish as much as possible.  Keep that in mind when contributing.
 
 # Roadmap
 
-- Add Specs
+- Add Controller Specs
 - Support PUT and DELETE Restful methods
+- Simplify the Models with macros
 - Add Comments with has_many like syntax
-- Add Endless Paging
-- Add Tagging
-- Add DB Migration Tools
 - Add Capistrano
 - Add Grunt/Gulp for Asset Compilation
 
