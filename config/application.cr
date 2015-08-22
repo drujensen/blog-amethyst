@@ -1,6 +1,6 @@
 require "../../amethyst/src/amethyst"
 #require "amethyst/all"
-require "../app/controllers/*"
+require "../src/controllers/*"
 
 module Blog
   class Application < Base::App
