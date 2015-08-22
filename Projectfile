@@ -3,7 +3,7 @@ deps do
   github "Codcore/amethyst"
   github "spalger/crystal-mime"
   
-  #Mysql Driver
-  github "waterlink/crystal-mysql"
+  #Amethyst Model
+  github "drujensen/amethyst-model"
 
 end
