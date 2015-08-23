@@ -22,7 +22,7 @@ class PostController < Base::Controller
   end
  
   def index
-    @posts = Post.all
+    @posts = Post.all("ORDER BY created_at DESC")
     respond_to do |format|
       format.html { render_with_layout "index", "default" }
     end
