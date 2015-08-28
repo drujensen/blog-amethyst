@@ -4,7 +4,7 @@ require "markdown/markdown"
 
 include Amethyst::Model
 
-class Post < Base::Model
+class Post < Model
   fields({ name: "VARCHAR(255)", body: "TEXT" })
 
   def last_updated
