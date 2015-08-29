@@ -6,6 +6,8 @@ close to a RoR's app I can get using the current libs, frameworks, etc.
 I tried to replicate the same file structure as a Rails App.  There are some
 minor differences but it should be fairly simple to see how I did this.
 
+One difference is `/app` is now `/src`.  I did this to stay closer to Crystal's file structure.
+
 # Installation
 
 This project requires Crystal 0.7.6 and a MySQL server installed.
