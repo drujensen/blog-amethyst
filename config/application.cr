@@ -1,5 +1,4 @@
-require "../../amethyst/src/amethyst"
-#require "amethyst/all"
+require "amethyst/all"
 require "../src/controllers/*"
 
 module Blog
