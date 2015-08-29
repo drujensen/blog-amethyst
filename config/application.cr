@@ -12,6 +12,7 @@ module Blog
     routes.draw do
       all  "/", "post#index"
       
+      register PostController
       get  "/posts", "post#index"
       get  "/posts/new", "post#new"
       post  "/posts/create", "post#create"
@@ -20,13 +21,10 @@ module Blog
       post "/posts/:id/update", "post#update"
       get  "/posts/:id/delete", "post#delete"
 
+      register LoginController
       get  "/login", "login#new"
       post  "/session/create", "login#create"
       get  "/logout", "login#delete"
-
-      register PostController
-      register LoginController
-
     end
 
   end
