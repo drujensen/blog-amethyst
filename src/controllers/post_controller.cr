@@ -40,8 +40,7 @@ class PostController < Base::Controller
 
   def create
     if @authorized
-      post = Post.new
-      if post
+      if post = Post.new
         post.name = request.parameters["name"]
         post.body = request.parameters["body"]
         post.save
@@ -78,8 +77,7 @@ class PostController < Base::Controller
   def update
     id = request.parameters["id"]
     if @authorized
-      post = Post.find(id) 
-      if post
+      if post = Post.find(id)
         post.name = request.parameters["name"]
         post.body = request.parameters["body"]
         post.save
@@ -94,8 +92,7 @@ class PostController < Base::Controller
   def delete
     id = request.parameters["id"]
     if @authorized
-      post = Post.find(id) 
-      if post
+      if post = Post.find(id)
         post.destroy
       end
     end
