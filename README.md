@@ -6,13 +6,11 @@ close to a RoR's app I can get using the current libs, frameworks, etc.
 I tried to replicate the same file structure as a Rails App.  There are some
 minor differences but it should be fairly simple to see how I did this.
 
-One of the biggest differences is that there is no ORM as of yet. I created a
-simple DAO layer for the model to use.  This should be pretty flexible and
-allow for most scenarios needed.
+One difference is `/app` is now `/src`.  I did this to stay closer to Crystal's file structure.
 
 # Installation
 
-This project requires Crystal 0.7.5 and a MySQL server installed.
+This project requires Crystal 0.7.6 and a MySQL server installed.
 
 ```
 git clone git@github.com:drujensen/crystal-blog.git
