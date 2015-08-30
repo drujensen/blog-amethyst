@@ -1,24 +1,12 @@
 require "amethyst-model"
 #require "../../amethyst-model/src/amethyst-model"
 require "markdown/markdown"
-require "json"
 
 include Amethyst::Model
 
 class Post < Model
   fields({ name: "VARCHAR(255)", body: "TEXT" })
 
-  json_mapping({
-    id: Int32,
-    name: String,
-    body: String,
-    created_at: Time,
-    updated_at: Time,
-  })
-  
-  def initialize
-  end
-  
   def last_updated
     last_updated = updated_at
     if last_updated.is_a?(Time)
