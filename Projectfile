@@ -3,8 +3,8 @@ deps do
   github "Codcore/amethyst"
   github "spalger/crystal-mime"
   
-  #Amethyst Model
-  github "drujensen/amethyst-model"
+  github "waterlink/active_record.cr"
   github "waterlink/crystal-mysql"
+  github "waterlink/mysql_adapter.cr"
 
 end

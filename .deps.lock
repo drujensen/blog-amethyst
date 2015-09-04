@@ -1,6 +1,7 @@
 {
   "amethyst": "991015f49cd10317addde5cdec6dfb79d6a0eeca",
   "mime": "bb69613b93dd059f68d1b508a31f83ca6c8eaace",
-  "amethyst-model": "ae68d137e05c1016feb4c9bad03c277740afb4d0",
-  "mysql": "32b393ada268907357a914d8138bfb772ca0d9ad"
+  "active_record": "3f117af0cd265bb4d2f9abd1e90a3e46abd03dc5",
+  "mysql": "32b393ada268907357a914d8138bfb772ca0d9ad",
+  "mysql_adapter": "c1cec7d2e2bc0074ae4ea33418bd3fbbf3016e8d"
 }
