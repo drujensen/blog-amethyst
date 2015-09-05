@@ -1,16 +1,16 @@
-require "../models/*"
+require "../models/post"
 
 class PostController < Base::Controller
   property :posts, :post, :authorized
 
-  actions :index, :new, :create, :read, :edit, :update, :delete
-  before_action :authorize, only: [:index, :new, :create, :read, :edit,
+  actions :index, :new, :create, :show, :edit, :update, :delete
+  before_action :authorize, only: [:index, :new, :create, :show, :edit,
                                    :update, :delete]
 
   layout "default", "#{__DIR__}/../views/layouts"
   
   view "index", "#{__DIR__}/../views/post"
-  view "read", "#{__DIR__}/../views/post"
+  view "show", "#{__DIR__}/../views/post"
   view "new", "#{__DIR__}/../views/post"
   view "edit", "#{__DIR__}/../views/post"
 
@@ -52,12 +52,12 @@ class PostController < Base::Controller
     end
   end
 
-  def read
+  def show
     id = request.parameters["id"]
    
     @post = Post.find(id) 
     respond_to do |format|
-      format.html { render_with_layout "read", "default" }
+      format.html { render_with_layout "show", "default" }
     end
   end
 

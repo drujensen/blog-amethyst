@@ -16,7 +16,7 @@ module Blog
       get  "/posts", "post#index"
       get  "/posts/new", "post#new"
       post  "/posts/create", "post#create"
-      get  "/posts/:id", "post#read"
+      get  "/posts/:id", "post#show"
       get  "/posts/:id/edit", "post#edit"
       post "/posts/:id/update", "post#update"
       get  "/posts/:id/delete", "post#delete"

@@ -40,8 +40,6 @@ simple and RoR'ish as much as possible.  Keep that in mind when contributing.
 
 # Roadmap
 
-- Support PUT and DELETE Restful methods
-- Simplify the Models with macros
 - Add Validation and Error Handling
 - Add Comments with `has many` like syntax
 - Add Capistrano

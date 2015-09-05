@@ -1,5 +1,4 @@
 require "crypto/md5"
-require "../models/*"
 
 class LoginController < Base::Controller
   property :authorized

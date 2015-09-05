@@ -1,10 +1,7 @@
 require "amethyst-model"
-#require "../../amethyst-model/src/amethyst-model"
 require "markdown/markdown"
 
-include Amethyst::Model
-
-class Post < Model
+class Post < Amethyst::Model::Model
   fields({ name: "VARCHAR(255)", body: "TEXT" })
 
   def last_updated

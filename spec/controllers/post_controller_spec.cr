@@ -19,7 +19,7 @@ describe PostController do
     end
   end
 
-  describe "#read" do
+  describe "#show" do
     it "should show the details of a post" do
       post = Post.new
       post.name = "Test Post"
@@ -27,7 +27,7 @@ describe PostController do
       
       controller = create_controller_instance(PostController, "GET",
                                               "/posts/#{post.id}")
-      controller.call_action "read"
+      controller.call_action "show"
       controller.response.body.should contain "Test Post"
     end
   end
