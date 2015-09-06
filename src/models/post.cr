@@ -1,5 +1,5 @@
-#require "amethyst-model"
-require "../../amethyst-model/src/amethyst-model"
+require "amethyst-model"
+#require "../../amethyst-model/src/amethyst-model"
 require "markdown/markdown"
 
 class Post < Amethyst::Model::Model

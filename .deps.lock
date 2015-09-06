@@ -1,7 +1,7 @@
 {
-  "amethyst": "991015f49cd10317addde5cdec6dfb79d6a0eeca",
+  "amethyst": "a0273e22d8a717e627ac55afaee9eae20db872c6",
   "mime": "bb69613b93dd059f68d1b508a31f83ca6c8eaace",
-  "amethyst-model": "e2b2fe1fe761f58010318274fcd6d4d7e18126cf",
+  "amethyst-model": "8eb8fb6b3fce753aad5dff0aaa48ee559e15fd91",
   "mysql": "410046b8566a008371d16dcf51820fe9e18e43c4",
   "pg": "8e60c969aa586ae47b08692238cd5fd165833747",
   "sqlite3": "5b08d2f48b06c5abef7aa7ceb553c168bad9f2bc"
