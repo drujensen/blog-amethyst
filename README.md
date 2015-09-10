@@ -30,6 +30,8 @@ the databases.
 Run the blog using `crystal run blog.cr` and hitting http://localhost:8080
 from your browser.
 
+The default username and password is `admin` and `password`.
+
 # Development
 
 There are several features that are still needed.  I am trying to keep this

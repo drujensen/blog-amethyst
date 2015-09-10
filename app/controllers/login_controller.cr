@@ -24,7 +24,12 @@ class LoginController < Base::Controller
   def create
     username = request.parameters["username"]
     password = request.parameters["password"]
-    if username == "admin" && Crypto::MD5.hex_digest(password) == "ff2fca5e688561ed5237c9a9445c427a"
+
+    # To change the password, uncomment the next line and copy into digest
+    # into the check.
+    # puts "Encrypted Password: #{Crypto::MD5.hex_digest(password)}"
+    
+    if username == "admin" && Crypto::MD5.hex_digest(password) == "5f4dcc3b5aa765d61d8327deb882cf99"
       session[:authorized] = "true"
     end
     respond_to do |format|
