@@ -1,6 +1,6 @@
 deps do
   #Amethyst Framework
-  github "drujensen/amethyst"
+  github "Codcore/amethyst"
   github "spalger/crystal-mime"
   
   #Amethyst Model

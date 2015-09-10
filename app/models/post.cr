@@ -5,7 +5,10 @@ require "markdown/markdown"
 class Post < Amethyst::Model::Model
   adapter sqlite
   
-  fields({ name: "CHAR(255)", body: "TEXT" })
+  sql_mapping({ 
+    name: "CHAR(255)", 
+    body: "TEXT" 
+  })
 
   def last_updated
     last_updated = updated_at
