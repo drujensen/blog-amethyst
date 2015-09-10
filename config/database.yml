@@ -1,5 +1,5 @@
 sqlite:
-  database: config/blog.db
+  database: db/blog.db
 mysql:
   host: 127.0.0.1
   port: 3306
