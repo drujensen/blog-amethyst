@@ -1,5 +1,4 @@
-# Example Blog using Crystal and Amethyst
-[![Build
+# Example Blog using Crystal and Amethyst [![Build
 Status](https://travis-ci.org/drujensen/crystal-blog.svg)](https://travis-ci.org/drujensen/crystal-blog)
 
 A blog that is written in Crystal using Amethyst.  This is a test to see how
@@ -10,21 +9,21 @@ minor differences but it should be fairly simple to see how I did this.
 
 # Installation
 
-This project requires Crystal 0.7.6 and a MySQL server installed.
+This project requires Crystal 0.7.7 and either SQLite or a MySQL database. I
+am including both drivers in the dependencies.
 
-```
-git clone git@github.com:drujensen/crystal-blog.git
-```
+``` git clone git@github.com:drujensen/crystal-blog.git ```
 
-Next setup the database by creating a "blog_development" and blog_test" schema. 
-
-Update the config/database.yml to match your settings. 
-
-Connect to the database and run `crystal /db/migrate.cr` to drop and create the databases. 
+Next setup the database.  The default is using SQLite so no setup is involved.
+If you decide to use MySQL, update the config/database.yml to match your
+settings and change the adapter in the models.
 
 Install dependencies using `crystal deps`
 
 Compile the code using `crystal build blog.cr`
+
+Connect to the database and run `crystal /db/migrate.cr` to drop and create
+the databases. 
 
 # Usage
 
@@ -33,8 +32,9 @@ from your browser.
 
 # Development
 
-There are several features that are still needed.  I am trying to keep this very
-simple and RoR'ish as much as possible.  Keep that in mind when contributing.
+There are several features that are still needed.  I am trying to keep this
+very simple and RoR'ish as much as possible.  Keep that in mind when
+contributing.
 
 # Roadmap
 
