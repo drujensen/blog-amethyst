@@ -1,5 +1,6 @@
-# Example Blog using Crystal and Amethyst [![Build
-Status](https://travis-ci.org/drujensen/crystal-blog.svg)](https://travis-ci.org/drujensen/crystal-blog)
+# Example Blog using Crystal and Amethyst 
+
+[![Build Status](https://travis-ci.org/drujensen/crystal-blog.svg)](https://travis-ci.org/drujensen/crystal-blog)
 
 A blog that is written in Crystal using Amethyst.  This is a test to see how
 close to a RoR's app I can get using the current libs, frameworks, etc.
