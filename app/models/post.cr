@@ -1,5 +1,6 @@
-require "amethyst-model"
 #require "../../amethyst-model/src/amethyst-model"
+require "amethyst-model"
+require "amethyst-model/sqlite_adapter"
 require "markdown/markdown"
 
 class Post < Amethyst::Model::Model

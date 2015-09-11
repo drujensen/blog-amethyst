@@ -5,8 +5,6 @@ deps do
   
   #Amethyst Model
   github "drujensen/amethyst-model"
-  github "waterlink/crystal-mysql"
   github "manastech/crystal-sqlite3"
-  github "will/crystal-pg"
 
 end
