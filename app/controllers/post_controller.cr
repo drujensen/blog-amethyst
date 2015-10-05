@@ -1,4 +1,5 @@
 require "../models/post"
+require "../models/posts_by_month"
 
 class PostController < Base::Controller
   property :posts, :post, :authorized

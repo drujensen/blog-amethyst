@@ -1,0 +1,18 @@
+version: 1.0
+shards:
+  amethyst:
+    github: Codcore/amethyst
+    commit: ad53218cf362e46b3236c68ffb08fc6840404962
+
+  amethyst-model:
+    github: drujensen/amethyst-model
+    commit: c591e30701a2ea880a3418e1441062faf25a7f42
+
+  mime:
+    github: spalger/crystal-mime
+    commit: bb69613b93dd059f68d1b508a31f83ca6c8eaace
+
+  sqlite3:
+    github: manastech/crystal-sqlite3
+    commit: 45fee52b988dcb6b862cde2c944413b837212f9d
+

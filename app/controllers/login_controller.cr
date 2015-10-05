@@ -25,8 +25,8 @@ class LoginController < Base::Controller
     username = request.parameters["username"]
     password = request.parameters["password"]
 
-    # To change the password, uncomment the next line and copy into digest
-    # into the check.
+    # To change the password, uncomment the next line and copy the results
+    # into the `if` below.
     # puts "Encrypted Password: #{Crypto::MD5.hex_digest(password)}"
     
     if username == "admin" && Crypto::MD5.hex_digest(password) == "5f4dcc3b5aa765d61d8327deb882cf99"

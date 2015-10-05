@@ -1,5 +1,3 @@
-#require "../../amethyst-model/src/amethyst-model"
-require "amethyst-model"
 require "amethyst-model/sqlite_adapter"
 require "markdown/markdown"
 
@@ -14,10 +12,10 @@ class Post < Amethyst::Model::Model
   def last_updated
     last_updated = updated_at
     if last_updated.is_a?(String)
-      last_updated = TimeFormat.new("%F %X").parse(last_updated)
+      last_updated = Time::Format.new("%F %X").parse(last_updated)
     end
     if last_updated.is_a?(Time)
-      formatter = TimeFormat.new("%B %d, %Y")
+      formatter = Time::Format.new("%B %d, %Y")
       last_updated = formatter.format(last_updated)
     end
     return last_updated

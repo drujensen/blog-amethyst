@@ -1,8 +1,9 @@
 sqlite:
   database: db/blog.db
+
 mysql:
   host: 127.0.0.1
   port: 3306
-  username: ${DB_USER}
+  database: blog
+  username: admin
   password: ${DB_PASS}
-  database: ${DB_NAME}
