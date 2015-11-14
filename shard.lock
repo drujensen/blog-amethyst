@@ -6,7 +6,7 @@ shards:
 
   amethyst-model:
     github: drujensen/amethyst-model
-    commit: 242cafc27a13033ca69ce23b3dcbfc1b9016b289
+    commit: a4321700078350ddb870d25edb6b36378a1bc4c3
 
   mime:
     github: spalger/crystal-mime
