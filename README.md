@@ -1,3 +1,5 @@
+# DEPRECATED.  Recommend using Kemal or Kemalyst
+
 # Example Blog using Crystal and Amethyst 
 
 [![Build Status](https://travis-ci.org/drujensen/crystal-blog.svg)](https://travis-ci.org/drujensen/crystal-blog)
